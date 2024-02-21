@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
 const moodboardSchema = new mongoose.Schema({
-  projectId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Project',
-    required: true
-  },
   photoId: {
     type:String
   },

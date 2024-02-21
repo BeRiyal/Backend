@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const connectDB = require('./db.js');
 const userRoutes = require('./controller/UserController.js');
 const teamRoutes = require('./controller/TeamController.js');
+const moodboardRoutes = require('./controller/MoodboardController.js');
 //initialize express
 const app = express();
 
@@ -12,6 +13,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use("/api/users", userRoutes);
 app.use("/api/teams", teamRoutes);
+app.use("/api/moodboards", moodboardRoutes);
 //connect to database
 const port = process.env.PORT || 5085;
 connectDB()
